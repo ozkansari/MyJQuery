@@ -1,6 +1,5 @@
 .twitted {
-	// width: 16em;
-	width: 75%;
+	width: 75%; /* [ozkansari 20110317] : Width changed from 16 em to 75% */
 	margin-bottom: 1.5em;
 	border: 1px solid #888;
 }
