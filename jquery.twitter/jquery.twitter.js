@@ -21,7 +21,8 @@
 			showHeading: true,
 			headingText: "Latest Tweets",
 			showProfileLink: true,
-			showTimestamp: true
+			showTimestamp: true,
+			openLinksInANewPage : true // [ozkansari 20110317] : Property to decide making each link open in a new page
 		};
 
 		var o = $.extend({}, $.fn.getTwitter.defaults, options);
@@ -52,7 +53,9 @@
 
 			// add Twitter profile link to container element
 			if (o.showProfileLink) {
-				var profileLinkHTML = "<p class=\"profileLink\"><a href=\"http://twitter.com/"+o.userName+"\">http://twitter.com/"+o.userName+"</a></p>";
+				var profileLinkHTML = "<p class=\"profileLink\"><a" + 
+					(o.openLinksInANewPage?" target=\"_blank\"":"") + // [ozkansari 20110317] : Make Main Link Open In a New Page
+					" href=\"http://twitter.com/"+o.userName+"\">http://twitter.com/"+o.userName+"</a></p>";
 				c.append(profileLinkHTML);
 			}
 
@@ -98,6 +101,14 @@
 
 				// add unique class to last list item
 				tl.find("li:last").addClass("lastTweet");
+				
+				// [ozkansari 20110317] : Make Each Link Open In a New Page
+				if(o.openLinksInANewPage) {
+					tl.find('a').each(function() {
+						this.target = '_blank'; 
+					});
+				}
+
 			});
 		});
 	};
