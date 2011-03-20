@@ -1,4 +1,5 @@
 .twitted {
+	// width: 16em;
 	width: 75%; /* [ozkansari 20110317] : Width changed from 16 em to 75% */
 	margin-bottom: 1.5em;
 	border: 1px solid #888;
@@ -34,16 +35,22 @@
 .twitted ul#twitter_update_list li span {
 	/* tweet content */
 	display: block;
+	font-size:10px;
+	line-height:12px;
 }
 
 .twitted ul#twitter_update_list li span a {
 	/* links in tweet content */
 	color: #00f;
+	font-size:10px;
+	line-height:12px;
 }
 
 .twitted ul#twitter_update_list li a {
 	/* timestamp link */
 	color: #f00;
+	font-size:10px;
+	line-height:12px;
 }
 
 .twitted ul#twitter_update_list li.firstTweet {

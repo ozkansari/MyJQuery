@@ -1,0 +1,68 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<title>Silverback &mdash; homepage demo - with jQuery Parallax 0.2</title> 
+	<script src="../../jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="../jquery.parallax-0.2.01-pack.js" type="text/javascript" charset="utf-8"></script> 
+	<link rel="stylesheet" media="screen" type="text/css" href="screen.css" /> 
+</head> 
+ 
+<body class="home"> 
+	
+	<div id="main"> 
+		<div class="wrapper outer"> 
+			<div class="wrapper inner"> 
+			  <br/><br/><br/><br/><br/> 
+			  <br/><br/><br/><br/><br/> 
+			  <br/><br/><br/><br/><br/> 
+			  <br/><br/><br/><br/><br/> 
+			</div><!-- /.wrapper inner --> 
+		</div><!-- /.wrapper outer --> 
+	</div><!-- /#main --> 
+	<script type="text/javascript"> 
+	  $('body').parallax({
+	  'autoMove':true,
+      'elements': [
+        {
+          'selector': 'body',
+          'properties': {
+            'x': {
+              'background-position-x': {
+                'initial': 0,
+                'multiplier': 0.1,
+                'invert': true
+              }
+            }
+          }
+        },
+        {
+          'selector': 'div.outer',
+          'properties': {
+            'x': {
+              'background-position-x': {
+                'initial': 50,
+                'multiplier': 0.02,
+                'unit': '%'
+              }
+            }
+          }
+        },
+        {
+          'selector': 'div.inner',
+          'properties': {
+            'x': {
+              'background-position-x': {
+                'initial': 0,
+                'multiplier': 0.3
+              }
+            }
+          }
+        }
+      ]
+    });
+	</script> 
+	<div id="test"></div> 
+</body> 
+</html>

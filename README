@@ -1,12 +1,33 @@
+--------------------------------------------------------------------------------------
 jquery.twitter Plugin
 --------------------------------------------------------------------------------------
-jquery.twitter.js v1.5
-Last updated: 08 July 2009
+jquery.twitter.js v 1.5.01
 
-Original Code Created by Damien du Toit
-http://coda.co.za/blog/2008/10/26/jquery-plugin-for-twitter
+Original Code : 
+   Created by Damien du Toit ( Last Update: 08 July 2009 )
+   http://coda.co.za/blog/2008/10/26/jquery-plugin-for-twitter
 
-Licensed under a Creative Commons Attribution-Non-Commercial 3.0 Unported License
-http://creativecommons.org/licenses/by-nc/3.0/
+Briefly :
+   A simple, unobtrusive and customisable client-side method for easily embedding a Twitter feed into a web page.
 
-Minimum JQuery Version Required : jquery-1.3.2
+License:
+   Licensed under a Creative Commons Attribution-Non-Commercial 3.0 Unported License
+   http://creativecommons.org/licenses/by-nc/3.0/
+
+Requirements:
+	Minimum JQuery Version Required : jquery-1.3.2
+
+
+--------------------------------------------------------------------------------------
+jquery.parallax
+--------------------------------------------------------------------------------------
+jquery.parallax.js v 0.2.01
+
+Original Code : 
+   Created by doc11.co.uk ( http://www.dom111.co.uk/blog/coding/jquery-parallax-0-2-minor-updates/125 )
+
+Briefly : 
+   Add a simple parallax effect to a page
+   
+License:
+   Free to use anywhere for anything, but I'd love to see what anyone does with it...
