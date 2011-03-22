@@ -396,12 +396,13 @@
           }
 
           // fix for firefox
-          if ('background-position-x' in opts || 'background-position-y' in opts) {
-        	var coords = $(options.elements[i].selector).css('backgroundPosition').split(' ');
-            opts['background-position'] = '' + (('background-position-x' in opts) ? opts['background-position-x'] : coords[0]) + ' ' + (('background-position-y' in opts) ? opts['background-position-y'] : coords[1]);
-       
-            delete opts['background-position-x'];
-            delete opts['background-position-y'];
+          if ($.browser.mozilla) {
+	          if ('background-position-x' in opts || 'background-position-y' in opts) {
+	            opts['background-position'] = '' + (('background-position-x' in opts) ? opts['background-position-x'] : '0px') + ' ' + (('background-position-y' in opts) ? opts['background-position-y'] : '0px');
+	
+	            delete opts['background-position-x'];
+	            delete opts['background-position-y'];
+	          }
           }
 
           // here's the magic! simples!
@@ -416,23 +417,19 @@
     	var dynamicPosition = {
     		'x' : 0,
     		'y' : 0,
-    		'direction' : 1
+    		'direction' : 1,
+    		'upperLimit' : 10000
     	};
 
     	el.schedule(
 			{
                 time: 10,
                 func: function (posSch) {
-				
-					var el = $(this);
-					var width = el.width();
-					
-					if(posSch.x>width){
+					if(posSch.x>posSch.upperLimit){
 						posSch.direction = -1;
 					} else if(posSch.x<0) {
 						posSch.direction = 1;
 					}
-					
 					posSch.x = posSch.x+posSch.direction;
 			    	animFunction(posSch);
 				},
