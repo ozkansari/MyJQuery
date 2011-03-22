@@ -31,3 +31,6 @@ Briefly :
    
 License:
    Free to use anywhere for anything, but I'd love to see what anyone does with it...
+   
+Requirements:
+	For autoMove property: jquery.schedule.js plugin (http://trainofthoughts.org/repo/fileview?f=jquery/jquery.schedule.js&v=20) 
